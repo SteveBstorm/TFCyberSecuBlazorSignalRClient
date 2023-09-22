@@ -1,0 +1,19 @@
+﻿@page "/chat";
+@using BlazorSignalRClient.Models;
+<h3>Chien</h3>
+Author : <input type="text" @bind-value="Author" /><br />
+Message : <input type="text" @bind-value="newMessage" />
+<button class="btn btn-success btn-sm" @onclick="EnvoiMessage">Envoyer</button>
+<button class="btn btn-info btn-lg" @onclick="RejoindreGroup">Rejoindre</button>
+<button class="btn btn-outline-danger col-sm-6" @onclick="SendToGroup">Groupe</button>
+<hr />
+<h4>Les messages</h4>
+<ul>
+    @foreach (Message m in ListeMessages)
+    {
+        <li>@m.Author - @m.Content</li>
+    }
+</ul>
+@code {
+
+}
