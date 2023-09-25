@@ -1,0 +1,26 @@
+﻿<h3>ArticleCreate</h3>
+
+<EditForm Model="myform" OnSubmit="submit" class="form-control">
+    <div class="form-control-sm">
+        <label>Nom : </label>
+        <InputText @bind-Value="myform.Name"></InputText>
+    </div>
+    <div class="form-control-sm">
+        <label>Prix : </label>
+        <InputNumber @bind-Value="myform.Price"></InputNumber>
+    </div>
+    <div class="form-control-sm">
+        <label>Catégorie : </label>
+        <InputText @bind-Value="myform.Category"></InputText>
+    </div>
+    <div class="form-control-sm">
+        <label>Description : </label>
+        <InputText @bind-Value="myform.Description"></InputText>
+    </div>
+    <button type="submit" button="btn btn-success">Valider</button>
+</EditForm>
+
+
+@code {
+
+}
